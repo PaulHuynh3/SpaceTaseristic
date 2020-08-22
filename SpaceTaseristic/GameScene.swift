@@ -16,10 +16,17 @@ enum CollisionType: UInt32 {
 }
 
 class GameScene: SKScene {
-    let player = SKSpriteNode(imageNamed: "player")
+    let player = SKSpriteNode(imageNamed: "player") //could create a node class for it
 
     let waves = Bundle.main.decode([Wave].self, from: "waves.json")
     let enemyTypes = Bundle.main.decode([EnemyType].self, from: "enemy-types.json")
+
+    var isPlayerAlive = true
+    var levelNumber = 0
+    var waveNumber = 0
+
+    let positions = Array(stride(from: -320, through: 320, by: 80))
+
 
     override func didMove(to view: SKView) {
         if let particles = SKEmitterNode(fileNamed: "Starfield") {
@@ -43,4 +50,39 @@ class GameScene: SKScene {
         player.physicsBody?.isDynamic = false
     }
 
+    override func update(_ currentTime: TimeInterval) {
+        createWave()
+    }
+
+    func createWave() {
+        guard isPlayerAlive else { return }
+
+        if waveNumber == waves.count {
+            levelNumber += 1
+            waveNumber = 0
+        }
+
+        let currentWave = waves[waveNumber]
+        waveNumber += 1
+
+        //make basic enemies appear first at beginning of each round
+        let maximumEnemyType = min(enemyTypes.count, levelNumber + 1)
+        let enemyType = Int.random(in: 0..<maximumEnemyType)
+
+        let enemyOffsetX: CGFloat = 100
+        let enemyStartX = 600
+
+        if currentWave.enemies.isEmpty {
+            for (index, position) in positions.shuffled().enumerated() {
+                let enemy = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: position), xOffset: enemyOffsetX * CGFloat(index * 3), moveStraight: true)
+                addChild(enemy)
+
+            }
+        } else {
+            for enemy in currentWave.enemies {
+                let enemy = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: positions[enemy.position]), xOffset: enemyOffsetX * enemy.xOffset, moveStraight: enemy.moveStraight)
+                addChild(enemy)
+            }
+        }
+    }
 }
