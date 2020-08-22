@@ -109,4 +109,24 @@ class GameScene: SKScene {
             }
         }
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard isPlayerAlive else { return }
+
+        let shot = SKSpriteNode(imageNamed: "playerWeapon")
+        shot.name = "playerWeapon"
+        shot.position = player.position
+
+        shot.physicsBody = SKPhysicsBody(rectangleOf: shot.size)
+        shot.physicsBody?.categoryBitMask = CollisionType.playerWeapon.rawValue
+        shot.physicsBody?.collisionBitMask = CollisionType.enemy.rawValue | CollisionType.enemyWeapon.rawValue
+        shot.physicsBody?.contactTestBitMask = CollisionType.enemy.rawValue | CollisionType.enemyWeapon.rawValue
+        addChild(shot)
+
+        let movement = SKAction.move(to: CGPoint(x: 1900, y: shot.position.y), duration: 5)
+        let sequence = SKAction.sequence([movement, .removeFromParent()])
+        shot.run(sequence)
+    }
+
+    
 }
