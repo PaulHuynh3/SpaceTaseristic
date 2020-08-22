@@ -65,6 +65,17 @@ class GameScene: SKScene {
         if activeEnemies.isEmpty {
             createWave()
         }
+
+        for enemy in activeEnemies {
+            guard frame.intersects(enemy.frame) else { continue }
+            if enemy.lastFireTime + 1 < currentTime {
+                enemy.lastFireTime = currentTime
+
+                if Int.random(in: 0...6) == 0 {
+                    enemy.fire()
+                }
+            }
+        }
     }
 
     func createWave() {
