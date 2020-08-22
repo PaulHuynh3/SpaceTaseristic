@@ -16,6 +16,14 @@
 		EB6B951C24F199EF00699663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6B951A24F199EF00699663 /* LaunchScreen.storyboard */; };
 		EB6B952724F199EF00699663 /* SpaceTaseristicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B952624F199EF00699663 /* SpaceTaseristicTests.swift */; };
 		EB6B953224F199EF00699663 /* SpaceTaseristicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B953124F199EF00699663 /* SpaceTaseristicUITests.swift */; };
+		EB6B954024F19DB600699663 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB6B953F24F19DB600699663 /* Starfield.sks */; };
+		EB6B954524F1A33300699663 /* waves.json in Resources */ = {isa = PBXBuildFile; fileRef = EB6B954324F1A33300699663 /* waves.json */; };
+		EB6B954624F1A33300699663 /* enemy-types.json in Resources */ = {isa = PBXBuildFile; fileRef = EB6B954424F1A33300699663 /* enemy-types.json */; };
+		EB6B954924F1A37600699663 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B954824F1A37600699663 /* Player.swift */; };
+		EB6B954B24F1A38D00699663 /* EnemyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B954A24F1A38D00699663 /* EnemyType.swift */; };
+		EB6B954D24F1A3CC00699663 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B954C24F1A3CC00699663 /* Wave.swift */; };
+		EB6B955124F1A4C100699663 /* Bundle-Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B955024F1A4C100699663 /* Bundle-Decoding.swift */; };
+		EB6B955424F1AB3400699663 /* EnemyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6B955324F1AB3400699663 /* EnemyNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		EB6B952D24F199EF00699663 /* SpaceTaseristicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceTaseristicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6B953124F199EF00699663 /* SpaceTaseristicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTaseristicUITests.swift; sourceTree = "<group>"; };
 		EB6B953324F199EF00699663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6B953F24F19DB600699663 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		EB6B954324F1A33300699663 /* waves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waves.json; sourceTree = "<group>"; };
+		EB6B954424F1A33300699663 /* enemy-types.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "enemy-types.json"; sourceTree = "<group>"; };
+		EB6B954824F1A37600699663 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		EB6B954A24F1A38D00699663 /* EnemyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyType.swift; sourceTree = "<group>"; };
+		EB6B954C24F1A3CC00699663 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
+		EB6B955024F1A4C100699663 /* Bundle-Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decoding.swift"; sourceTree = "<group>"; };
+		EB6B955324F1AB3400699663 /* EnemyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				EB6B950A24F199ED00699663 /* SpaceTaseristic */,
+				EB6B955224F1A99600699663 /* Extensions */,
+				EB6B954E24F1A47400699663 /* Flow */,
+				EB6B954724F1A34A00699663 /* Models */,
+				EB6B954124F1A09F00699663 /* SupportingFiles */,
 				EB6B952524F199EF00699663 /* SpaceTaseristicTests */,
 				EB6B953024F199EF00699663 /* SpaceTaseristicUITests */,
 				EB6B950924F199ED00699663 /* Products */,
@@ -105,8 +125,8 @@
 				EB6B950D24F199ED00699663 /* GameScene.sks */,
 				EB6B951124F199ED00699663 /* GameScene.swift */,
 				EB6B951324F199ED00699663 /* GameViewController.swift */,
+				EB6B953F24F19DB600699663 /* Starfield.sks */,
 				EB6B951524F199ED00699663 /* Main.storyboard */,
-				EB6B951824F199EF00699663 /* Assets.xcassets */,
 				EB6B951A24F199EF00699663 /* LaunchScreen.storyboard */,
 				EB6B951D24F199EF00699663 /* Info.plist */,
 			);
@@ -129,6 +149,58 @@
 				EB6B953324F199EF00699663 /* Info.plist */,
 			);
 			path = SpaceTaseristicUITests;
+			sourceTree = "<group>";
+		};
+		EB6B954124F1A09F00699663 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B951824F199EF00699663 /* Assets.xcassets */,
+				EB6B954224F1A0D300699663 /* JSONFiles */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EB6B954224F1A0D300699663 /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B954424F1A33300699663 /* enemy-types.json */,
+				EB6B954324F1A33300699663 /* waves.json */,
+			);
+			path = JSONFiles;
+			sourceTree = "<group>";
+		};
+		EB6B954724F1A34A00699663 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B954824F1A37600699663 /* Player.swift */,
+				EB6B954A24F1A38D00699663 /* EnemyType.swift */,
+				EB6B954C24F1A3CC00699663 /* Wave.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB6B954E24F1A47400699663 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B954F24F1A48100699663 /* EnemyNodes */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		EB6B954F24F1A48100699663 /* EnemyNodes */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B955324F1AB3400699663 /* EnemyNode.swift */,
+			);
+			path = EnemyNodes;
+			sourceTree = "<group>";
+		};
+		EB6B955224F1A99600699663 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B955024F1A4C100699663 /* Bundle-Decoding.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB6B951724F199ED00699663 /* Main.storyboard in Resources */,
+				EB6B954624F1A33300699663 /* enemy-types.json in Resources */,
 				EB6B950E24F199ED00699663 /* GameScene.sks in Resources */,
+				EB6B954024F19DB600699663 /* Starfield.sks in Resources */,
 				EB6B951924F199EF00699663 /* Assets.xcassets in Resources */,
+				EB6B954524F1A33300699663 /* waves.json in Resources */,
 				EB6B951C24F199EF00699663 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6B954D24F1A3CC00699663 /* Wave.swift in Sources */,
+				EB6B954924F1A37600699663 /* Player.swift in Sources */,
+				EB6B954B24F1A38D00699663 /* EnemyType.swift in Sources */,
 				EB6B951224F199ED00699663 /* GameScene.swift in Sources */,
+				EB6B955124F1A4C100699663 /* Bundle-Decoding.swift in Sources */,
 				EB6B951424F199ED00699663 /* GameViewController.swift in Sources */,
+				EB6B955424F1AB3400699663 /* EnemyNode.swift in Sources */,
 				EB6B950C24F199ED00699663 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
