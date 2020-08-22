@@ -29,6 +29,7 @@ class GameScene: SKScene {
 
 
     override func didMove(to view: SKView) {
+        physicsWorld.gravity = .zero
         if let particles = SKEmitterNode(fileNamed: "Starfield") {
             particles.position = CGPoint(x: 1000, y: 0)
             particles.advanceSimulationTime(60)
@@ -51,7 +52,19 @@ class GameScene: SKScene {
     }
 
     override func update(_ currentTime: TimeInterval) {
-        createWave()
+        for child in children {
+            if child.frame.maxX < 0 { //not at least greater than half the screen
+                if !frame.intersects(child.frame) { //not visible on screen
+                    child.removeFromParent()
+                }
+            }
+        }
+
+        let activeEnemies = children.compactMap { $0 as? EnemyNode }
+
+        if activeEnemies.isEmpty {
+            createWave()
+        }
     }
 
     func createWave() {
