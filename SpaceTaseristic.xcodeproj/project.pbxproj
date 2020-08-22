@@ -102,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				EB6B950A24F199ED00699663 /* SpaceTaseristic */,
+				EB6B955D24F1BFC400699663 /* SKS */,
 				EB6B955224F1A99600699663 /* Extensions */,
 				EB6B954E24F1A47400699663 /* Flow */,
+				EB6B954F24F1A48100699663 /* Nodes */,
 				EB6B954724F1A34A00699663 /* Models */,
 				EB6B954124F1A09F00699663 /* SupportingFiles */,
 				EB6B952524F199EF00699663 /* SpaceTaseristicTests */,
@@ -127,11 +129,9 @@
 			children = (
 				EB6B950B24F199ED00699663 /* AppDelegate.swift */,
 				EB6B950D24F199ED00699663 /* GameScene.sks */,
-				EB6B955924F1BC5300699663 /* Explosion.sks */,
 				EB6B955A24F1BC5300699663 /* Assets.xcassets */,
 				EB6B951124F199ED00699663 /* GameScene.swift */,
 				EB6B951324F199ED00699663 /* GameViewController.swift */,
-				EB6B953F24F19DB600699663 /* Starfield.sks */,
 				EB6B951524F199ED00699663 /* Main.storyboard */,
 				EB6B951A24F199EF00699663 /* LaunchScreen.storyboard */,
 				EB6B951D24F199EF00699663 /* Info.plist */,
@@ -188,7 +188,6 @@
 		EB6B954E24F1A47400699663 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				EB6B954F24F1A48100699663 /* Nodes */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -207,6 +206,15 @@
 				EB6B955024F1A4C100699663 /* Bundle-Decoding.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB6B955D24F1BFC400699663 /* SKS */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B955924F1BC5300699663 /* Explosion.sks */,
+				EB6B953F24F19DB600699663 /* Starfield.sks */,
+			);
+			path = SKS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
